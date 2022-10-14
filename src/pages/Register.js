@@ -57,10 +57,6 @@ const ContentStyle = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function Register() {
-  const smUp = useResponsive('up', 'sm');
-
-  const mdUp = useResponsive('up', 'md');
-
   return (
     <Page title="Register">
       <ContentStyle justifyContent="flex-start">
