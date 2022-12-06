@@ -17,6 +17,11 @@ const navConfig = [
     path: 'user/addnew',
     icon: getIcon('eva:person-add-fill'),
   },
+  {
+    title: 'Client View',
+    path: 'client',
+    icon: getIcon('eva:person-add-fill'),
+  },
 ];
 
 export default navConfig;

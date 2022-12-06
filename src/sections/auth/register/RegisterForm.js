@@ -27,16 +27,8 @@ export default function RegisterForm() {
       .max(60, 'You must be at most 60 years'),
   });
 
-  const defaultValues = {
-    name: '',
-    age: '',
-    email: '',
-    cell: '',
-  };
-
   const methods = useForm({
     resolver: yupResolver(RegisterSchema),
-    defaultValues,
   });
 
   const {
@@ -44,17 +36,15 @@ export default function RegisterForm() {
     formState: { isSubmitting },
   } = methods;
 
-  const onSubmit = async () => {
-    navigate('/', { replace: true });
-  };
+  const onSubmit = async () => {};
 
   return (
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
       <Stack spacing={3}>
         <RHFTextField name="name" label="Full Name" />
         <RHFTextField name="email" label="Email address" />
-        <RHFTextField name="cell" label="Cell Number" />
-        <RHFTextField name="age" label="Age" type="number" />
+        <RHFTextField name="role" label="Role" />
+        <RHFTextField name="password" label="Password" type="password" />
 
         <LoadingButton fullWidth size="large" type="submit" variant="contained" loading={isSubmitting}>
           Add User

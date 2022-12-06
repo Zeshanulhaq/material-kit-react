@@ -8,6 +8,7 @@ import User from './pages/User';
 
 import NotFound from './pages/Page404';
 import Register from './pages/Register';
+import DashboardApp from './pages/DashboardApp';
 
 // ----------------------------------------------------------------------
 
@@ -22,6 +23,7 @@ export default function Router() {
           path: 'user/addnew',
           element: <Register />,
         },
+        { path: 'client', element: <DashboardApp /> },
       ],
     },
 

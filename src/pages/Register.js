@@ -59,13 +59,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
 export default function Register() {
   return (
     <Page title="Register">
-      <ContentStyle justifyContent="flex-start">
-        <Typography variant="h4" gutterBottom>
-          Get started absolutely free.
-        </Typography>
-
-        <Typography sx={{ color: 'text.secondary', mb: 5 }}>Free forever. No credit card needed.</Typography>
-
+      <ContentStyle>
         <RegisterForm />
       </ContentStyle>
     </Page>
